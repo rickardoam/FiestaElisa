@@ -1,0 +1,991 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+:root {
+
+  --navy: #050b2a;
+  --blue: #102a72;
+
+  --cyan: #56e5ff;
+
+  --ice: #e9fbff;
+
+  --gold: #f8d878;
+
+  --white: #ffffff;
+
+  --pink: #d9b5ff;
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      #173b89 0%,
+      #091748 28%,
+      #04091f 70%
+    );
+
+  font-family: "Quicksand", sans-serif;
+
+  overflow-x: hidden;
+
+}
+
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(86,229,255,.12),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 85% 65%,
+      rgba(217,181,255,.12),
+      transparent 30%
+    );
+
+  z-index: -1;
+
+}
+
+
+#stars {
+
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+}
+
+
+.welcome,
+.invitation {
+
+  position: relative;
+
+  z-index: 1;
+
+}
+
+
+.hidden {
+
+  display: none !important;
+
+}
+
+
+/* =========================
+   PANTALLA INICIAL
+========================= */
+
+
+.welcome {
+
+  min-height: 100svh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  overflow: hidden;
+
+}
+
+
+.welcome-glow {
+
+  position: absolute;
+
+  width: 420px;
+
+  height: 420px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(86,229,255,.18),
+      transparent 68%
+    );
+
+  filter: blur(5px);
+
+  animation: pulse 4s ease-in-out infinite;
+
+}
+
+
+.crown {
+
+  position: relative;
+
+  font-size: 58px;
+
+  color: var(--gold);
+
+  text-shadow:
+    0 0 20px rgba(248,216,120,.7);
+
+  animation:
+    float 4s ease-in-out infinite;
+
+}
+
+
+.eyebrow,
+.small-title,
+.card-label {
+
+  letter-spacing: .2em;
+
+  font-size: .72rem;
+
+  font-weight: 700;
+
+  color: var(--cyan);
+
+}
+
+
+.welcome h1 {
+
+  margin: 8px 0 0;
+
+  font-family: "Cinzel", serif;
+
+  font-size:
+    clamp(4rem, 18vw, 7rem);
+
+  line-height: .9;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff,
+      #a8efff
+    );
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+}
+
+
+.turning {
+
+  margin:
+    5px 0 5px;
+
+  font-size: 1.1rem;
+  
+}
+
+
+.age {
+
+  width: 125px;
+
+  height: 125px;
+
+  display: grid;
+
+  place-items: center;
+
+
+}
+
+
+.age span {
+
+  font-family: "Cinzel", serif;
+
+  font-size: 4rem;
+
+  color: var(--gold);
+
+}
+
+
+.surprise {
+
+  font-size: 1rem;
+
+  margin:
+    8px 0 30px;
+
+}
+
+
+.magic-button {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding:
+    15px 24px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  color: #061032;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff,
+      #7ceaff
+    );
+
+  font:
+    700 1rem
+    "Quicksand", sans-serif;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 30px
+    rgba(86,229,255,.4);
+
+  transition: .25s ease;
+
+}
+
+
+.magic-button:hover {
+
+  transform:
+    translateY(-3px)
+    scale(1.02);
+
+  box-shadow:
+    0 0 45px
+    rgba(86,229,255,.65);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+
+.hero {
+
+  min-height: 100svh;
+
+  padding:
+    50px 20px 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+
+}
+
+
+.hero-stars {
+
+  color: var(--gold);
+
+  letter-spacing: 10px;
+
+  opacity: .8;
+
+  margin-bottom: 15px;
+
+}
+
+
+.hero h2 {
+
+  margin:
+    15px 0 0;
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(2rem, 9vw, 4rem);
+
+}
+
+
+.big-eight {
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(8rem, 38vw, 15rem);
+
+  line-height: .75;
+
+  font-weight: 700;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff,
+      #72e6ff 55%,
+      #8bb6ff
+    );
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  filter:
+    drop-shadow(
+      0 0 25px
+      rgba(86,229,255,.3)
+    );
+
+}
+
+
+.hero-message {
+
+  font-size: 1.1rem;
+
+  margin:
+    22px 0 0;
+
+}
+
+
+.scroll-hint {
+
+  position: absolute;
+
+  bottom: 25px;
+
+  opacity: .55;
+
+  font-size: .75rem;
+
+  letter-spacing: .12em;
+
+  animation:
+    bounce 2s infinite;
+
+}
+
+
+/* =========================
+   PERSONAJE 
+========================= */
+
+
+.character-placeholder {
+
+  width: 145px;
+
+  height: 145px;
+
+  position: relative;
+
+  margin:
+    5px auto 10px;
+
+  animation:
+    float 4s ease-in-out infinite;
+
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+
+.surprise-card,
+.details,
+.countdown-section,
+.rsvp {
+
+  width:
+    min(92%, 700px);
+
+  margin:
+    0 auto 55px;
+
+}
+
+
+.surprise-card {
+
+  position: relative;
+
+  padding:
+    34px 25px;
+
+  text-align: center;
+
+  border:
+    1px solid
+    rgba(86,229,255,.35);
+
+  border-radius: 28px;
+
+  background:
+    rgba(9,24,67,.72);
+
+  backdrop-filter:
+    blur(10px);
+
+}
+
+
+.surprise-card h3,
+.rsvp h3 {
+
+  margin:
+    5px 0 12px;
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(1.5rem, 6vw, 2.3rem);
+
+}
+
+
+.surprise-card p:last-child,
+.rsvp > p {
+
+  line-height: 1.7;
+
+  opacity: .85;
+
+}
+
+
+.card-star {
+
+  position: absolute;
+
+  top: -16px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  width: 32px;
+
+  height: 32px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--gold);
+
+  background:
+    var(--navy);
+
+  border:
+    1px solid
+    var(--gold);
+
+  border-radius: 50%;
+
+}
+
+
+.section-title {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 25px;
+
+}
+
+
+.section-title span {
+
+  color: var(--gold);
+
+}
+
+
+.section-title h3 {
+
+  font-family:
+    "Cinzel", serif;
+
+  margin: 0;
+
+  font-size: 1.45rem;
+
+}
+
+
+.details-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 13px;
+
+}
+
+
+.detail-card {
+
+  text-align: center;
+
+  padding:
+    22px 12px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.1);
+
+  border-radius: 20px;
+
+  background:
+    rgba(255,255,255,.045);
+
+}
+
+
+.location-card {
+
+  grid-column:
+    1 / -1;
+
+}
+
+
+.icon {
+
+  font-size: 1.7rem;
+
+  margin-bottom: 8px;
+
+}
+
+
+.detail-card h4 {
+
+  margin: 0 0 5px;
+
+  color: var(--cyan);
+
+}
+
+
+.detail-card p {
+
+  margin:
+    0 0 13px;
+
+}
+
+
+.map-button {
+
+  display: inline-block;
+
+  padding:
+    9px 15px;
+
+  border-radius: 999px;
+
+  color: #061032;
+
+  background:
+    #d9faff;
+
+  font-size: .8rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+}
+
+
+/* =========================
+   CUENTA REGRESIVA
+========================= */
+
+
+.countdown {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 8px;
+
+}
+
+
+.countdown div {
+
+  text-align: center;
+
+  padding:
+    16px 5px;
+
+  border-radius: 17px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid
+    rgba(86,229,255,.18);
+
+}
+
+
+.countdown strong {
+
+  display: block;
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(1.6rem, 8vw, 2.5rem);
+
+  color: var(--gold);
+
+}
+
+
+.countdown span {
+
+  display: block;
+
+  font-size: .68rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+
+  opacity: .65;
+
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+
+.rsvp {
+
+  text-align: center;
+
+  padding:
+    40px 25px;
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(86,229,255,.16),
+      transparent 55%
+    ),
+    rgba(8,20,57,.8);
+
+  border:
+    1px solid
+    rgba(86,229,255,.3);
+
+}
+
+
+.luma {
+
+  width: 60px;
+
+  height: 60px;
+
+  margin:
+    0 auto 18px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #fff9a8;
+
+  background:
+    rgba(255,247,132,.08);
+
+  box-shadow:
+    0 0 35px
+    rgba(255,247,132,.25);
+
+  font-size: 2rem;
+
+  animation:
+    twinkle 1.5s
+    infinite alternate;
+
+}
+
+
+.whatsapp-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 14px;
+
+  padding:
+    14px 20px;
+
+  border-radius: 999px;
+
+  background:
+    #d9faff;
+
+  color:
+    #061032;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+}
+
+
+.whatsapp-button:hover {
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+
+  padding:
+    35px 20px 60px;
+
+  text-align: center;
+
+  opacity: .8;
+
+}
+
+
+.footer-stars {
+
+  color: var(--gold);
+
+  letter-spacing: 12px;
+
+  margin-bottom: 15px;
+
+}
+
+
+footer p {
+
+  margin:
+    0 0 8px;
+
+}
+
+
+footer small {
+
+  opacity: .6;
+
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+
+.reveal {
+
+  opacity: 0;
+
+  transform:
+    translateY(35px);
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+
+.reveal.visible {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+@keyframes float {
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+}
+
+
+@keyframes pulse {
+
+  0%, 100% {
+    transform: scale(.9);
+    opacity: .7;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes twinkle {
+
+  from {
+    transform: scale(.85);
+    opacity: .55;
+  }
+
+  to {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes bounce {
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+
+}
+
+
+@media (min-width: 650px) {
+
+  .details-grid {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+  }
+
+  .location-card {
+
+    grid-column: auto;
+
+  }
+
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Elisa cumple 8 años ✨</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Fondo de estrellas -->
+  <canvas id="stars"></canvas>
+
+  <!-- Pantalla inicial -->
+  <section id="welcome" class="welcome">
+
+    <div class="welcome-glow"></div>
+
+    <div class="crown"><img src="assets/rosalina.png" alt="rosalina" height="200px" width="auto"></div>
+
+    <p class="eyebrow">
+      ✨UNA ESTRELLA ESTÁ POR BRILLAR✨
+    </p>
+
+    <h1 style="margin-bottom: 0;"><img src="assets/ELISA.png" alt="ELISA" height="100px" width="auto"></h1>
+
+    <p class="turning">
+      está por cumplir
+    </p>
+
+    <div class="age">
+      <span><img src="assets/Luma+8_2.png" alt="8" height="120px" width="auto"></span>
+    </div>
+
+    <p class="surprise">
+      🎉 ¡Y será una fiesta sorpresa! 🎉
+    </p>
+    
+    <button id="openInvitation" class="magic-button">
+      <span>Descubrir la sorpresa</span>
+      <b>✦</b>
+    </button>
+
+  </section>
+
+
+  <!-- INVITACIÓN -->
+  <main id="invitation" class="invitation hidden">
+
+    <!-- HERO -->
+    <header class="hero">
+
+      <div class="hero-stars">
+        ✦　⋆　✧　✦　⋆　✧
+      </div>
+
+      <div class="character-placeholder">
+
+        <img src="assets/LumaSola.png" alt="luma" height="150px" width="auto">
+
+      </div>
+
+      <p class="small-title">
+        UNA TARDE MÁGICA EN EL ESPACIO
+      </p>
+
+      <h2>
+        Elisa cumple
+      </h2>
+
+      <div class="big-eight">
+        <img src="assets/Luma+8_2.png" alt="8" height="200" width="auto">
+      </div>
+
+      <p class="hero-message">
+        Y queremos celebrarlo contigo ✨
+      </p>
+
+      <div class="scroll-hint">
+        ↓ descubre los detalles ↓
+      </div>
+
+    </header>
+
+
+    <!-- SORPRESA -->
+    <section class="surprise-card reveal" >
+
+      <span class="card-star">
+        ✦
+      </span>
+
+      <h3 class="card-label">
+        SHHHH...🤫
+      </h3>
+
+      <h3>
+        ¡Es una fiesta sorpresa!
+      </h3>
+
+      <p>
+        Ayúdanos a guardar el secreto y prepárate
+        para celebrar con Elisa. 
+      </p>
+      <p>
+      Tu presencia es el mejor regalo, si deseas ponemos nuestra mesa de regalo Liverpool <span style="font-weight: bold;">60056963</span>
+        </p>
+    </section>
+
+
+    <!-- DATOS -->
+    <section class="details reveal">
+
+      <div class="section-title">
+
+        <span>✦</span>
+
+        <h3>
+          La misión
+        </h3>
+
+        <span>✦</span>
+
+      </div>
+
+
+      <div class="details-grid">
+
+        <!-- Fecha -->
+        <article class="detail-card">
+
+          <div class="icon">
+            📅
+          </div>
+
+          <h4>
+            Fecha
+          </h4>
+
+          <p>
+            14 de octubre
+          </p>
+
+        </article>
+
+
+        <!-- Hora -->
+        <article class="detail-card">
+
+          <div class="icon">
+            🕒
+          </div>
+
+          <h4>
+            Hora
+          </h4>
+
+          <p>
+            3:00 PM
+          </p>
+
+        </article>
+
+
+        <!-- Lugar -->
+        <article class="detail-card location-card">
+
+          <div class="icon">
+            📍
+          </div>
+
+          <h4>
+            Lugar
+          </h4>
+
+          <p>
+            Salón "Super Fiesta"
+          </p>
+
+          <a
+            class="map-button"
+            href="https://maps.app.goo.gl/iDy8jak62w96tNhEA?g_st=ac"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Abrir ubicación
+
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- CUENTA REGRESIVA -->
+    <section class="countdown-section reveal">
+
+      <div class="section-title">
+
+        <span>✦</span>
+
+        <h3>
+          Cuenta regresiva
+        </h3>
+
+        <span>✦</span>
+
+      </div>
+
+
+      <div id="countdown" class="countdown">
+
+        <div>
+          <strong id="days">--</strong>
+          <span>días</span>
+        </div>
+
+        <div>
+          <strong id="hours">--</strong>
+          <span>horas</span>
+        </div>
+
+        <div>
+          <strong id="minutes">--</strong>
+          <span>min</span>
+        </div>
+
+        <div>
+          <strong id="seconds">--</strong>
+          <span>seg</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONFIRMACIÓN -->
+    <section class="rsvp reveal">
+
+      <div class="luma">
+       <img src="assets/LumaDorada.png" alt="LumaDorada" height="50px" width="auto">
+      </div>
+
+      <p class="card-label">
+        IMPORTANTE
+      </p>
+
+      <h3>
+        ¿Nos acompañas?
+      </h3>
+
+      <p>
+        Confirma tu asistencia por WhatsApp.
+        <strong>
+          Si llevarás invitados adicionales,
+          por favor avísanos.
+        </strong>
+      </p>
+
+
+      <a
+        class="whatsapp-button"
+        href="https://wa.me/529932508050?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20fiesta%20sorpresa%20de%20Elisa.%20Llevar%C3%A9%20%5B%20%5D%20invitado%28s%29."
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <span>💬</span>
+
+        Confirmar por WhatsApp
+
+      </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      <div class="footer-stars">
+        ✦ ⋆ ✧ ⋆ ✦
+      </div>
+
+      <p>
+        Con cariño, esperamos verte ahí 💙
+      </p>
+
+      <small>
+        Una celebración llena de estrellas ✨
+      </small>
+
+    </footer>
+
+  </main>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
